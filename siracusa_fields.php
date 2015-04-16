@@ -172,6 +172,7 @@ add_action('wp_enqueue_scripts', 'output_siracusa_field');
 
 
 function output_sf_embedded_style() {
+	global $post;
 	global $siracusa_field;
 
 	if(!is_single()) return;
@@ -184,6 +185,7 @@ add_action('wp_head', 'output_sf_embedded_style');
 
 
 function output_sf_embedded_script() {
+	global $post;
 	global $siracusa_field;
 
 	if(!is_single()) return;
