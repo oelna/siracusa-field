@@ -76,7 +76,7 @@ add_action('admin_init', 'siracusa_field');
 function display_siracusa_field( $post ) {
 
 	$fields = json_decode(get_post_meta($post->ID, 'siracusa_field', true), true);
-
+	wp_nonce_field('siracusa_fields_meta_'.$post->ID, '_siracusa_fields_nonce');
 	?>
 
 	<div class="sf-styles">
@@ -118,7 +118,23 @@ function display_siracusa_field( $post ) {
 
 
 function add_siracusa_field( $id, $post ) {
-
+	// check autosave
+	if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+		return;
+	}
+        
+        // check if nonce is set
+        if(!isset($_POST['_siracusa_fields_nonce'])) {
+        	return;
+        }
+        
+        // does this user have the capability to 
+        if(!current_user_can('edit_post', $id)) {
+        	return;
+        }
+	
+	check_admin_referer('siracusa_fields_meta_'.$id, '_siracusa_fields_nonce');
+	
 	$insert = array();
 
 	if(isset($_POST['sf_style']) && !empty($_POST['sf_style'])) {
