@@ -16,3 +16,8 @@ In case Ars Technica ever releases the actual plugin code, let me know and I'll 
 
 ![Siracusa Field on Ars Technica](http://cdn.arstechnica.net/wp-content/uploads/2015/04/Screen-Shot-2015-04-16-at-9.29.53-AM.png "")  
 Image © Ars Technica
+
+
+If you'd like to support what I do, please consider tipping.
+
+[![Gittip](https://www.dropbox.com/s/23emy7ngeqdnrrc/logo_gittip.png?raw=1)](https://www.gittip.com/oelna/)  [![Flattr](https://www.dropbox.com/s/20legqru72ffddw/logo_flattr.png?raw=1)](https://flattr.com/submit/auto?user_id=oelna&url=https%3A%2F%2Fgithub.com%2Foelna%2Fsiracusa-field&title=siracusa-field&language=en&tags=github&category=software)
